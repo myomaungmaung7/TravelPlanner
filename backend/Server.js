@@ -36,6 +36,22 @@ app.post('/login', (req, res) => {
     })
 })
 
+app.post("/register", (req, res) => {
+    const sql = "insert into user (`user_name`, `email`, `password`, `gender`) values (?)";
+    const values = [
+        req.body.name,
+        req.body.email,
+        req.body.password,
+        req.body.gender
+    ]
+    db.query(sql, [values], (err, data) => {
+        if (err) {
+            return res.json("Error");
+        }
+        return res.json(data);
+    })
+})
+
 app.listen(8081, () => {
     console.log("Running.....")
 }) 

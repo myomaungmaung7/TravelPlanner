@@ -19,13 +19,16 @@ function UnHome() {
                   </li>
                 </ul>
               </div>
+
               <form className='d-flex' role='submit'>
                 <Link to='/login' className='btn btn-outline-secondary me-2 fw-bold'>Login</Link>
                 <Link to='/register' className='btn btn-outline-secondary me-4 fw-bold'>Register</Link>
               </form>
+
             </div>
           </nav>
         </header>
+
         <div className='p-5'>
           <h2 className='ms-5 mb-3 fw-bold'>Let's Explore Myanmar!</h2>
           <p className='text-center fw-bold'>
@@ -36,6 +39,7 @@ function UnHome() {
             Already have an account? <Link to='/login' className='text-decoration-none'>Login</Link>
           </p>
         </div>
+        
         <div>
           <p className='fixed-bottom text-center fw-semibold'>copyright &copy; 2024,Institute of Advanced Technologies | All Rights Reserved.</p>
         </div>
