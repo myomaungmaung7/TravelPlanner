@@ -58,9 +58,9 @@ function Register() {
 
           <div className='mb-3'>
             <input type='radio' name='gender' value='Male' className='me-2' onChange={handleInput}></input>
-            <label htmlFor='male' className='me-5'>Male</label>
+            <label htmlFor='male' className='me-5'>Male <i class="bi bi-gender-male text-primary"></i></label>
             <input type='radio' name='gender' value='Female' className='me-2'  onChange={handleInput}></input>
-            <label htmlFor='female' className='me-2'>Female</label>
+            <label htmlFor='female' className='me-2'>Female <i class="bi bi-gender-female" id='female'></i></label>
             <p className='text-danger'>{errors.gender}</p>
           </div>
 

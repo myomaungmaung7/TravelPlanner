@@ -40,7 +40,6 @@ app.post('/login', (req, res) => {
 
 app.post("/register", (req, res) => {
     const sql = "insert into user (`user_name`, `email`, `password`, `gender`) values (?)";
-    
     const values = [
         req.body.name,
         req.body.email,
@@ -52,6 +51,23 @@ app.post("/register", (req, res) => {
             return res.json("Error");
         }
         return res.json(data);
+    })
+})
+
+app.get("/", (req, res) => {
+    const sql = "select * from user";
+    db.query(sql, (err, data) => {
+        if(err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
+app.post('/addnewuser', (req, res) => {
+    const sql = "insert into user (user_name,email,password,role,gender) values (?)";
+    const values = [...Object.values(req.body)];
+    db.query(sql, [values], (err, data) => {
+        if(err) return res.json("Error");
+        return res.json({data})
     })
 })
 

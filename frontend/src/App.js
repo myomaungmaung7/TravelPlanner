@@ -6,6 +6,9 @@ import Register from './Register';
 import UnHome from './UnHome';
 import AdminProfile from './AdminProfile';
 import Profile from './Profile';
+import ManageAccount from './ManageAccount';
+import AddNewUser from './AddNewUser'
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/adminprofile' element={<AdminProfile/>}></Route>
           <Route path='/profile' element={<Profile/>}></Route>
+          <Route path='/manageaccount' element={<ManageAccount/>}></Route>
+          <Route path='/addnewuser' element={<AddNewUser/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

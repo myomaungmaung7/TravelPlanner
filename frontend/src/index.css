@@ -27,4 +27,17 @@ code {
   color: black;
 }
 
+#des:hover {
+  color: #F171AB;
+}
 
+#female {
+  color: #F171AB;
+}
+
+#right {
+ width: 100px;
+ text-align: right;
+ clear: both;
+ padding: 10px;
+}
