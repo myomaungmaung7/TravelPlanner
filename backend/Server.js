@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import jwt from 'jsonwebtoken'
 
 const app = express();
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors(
     {
@@ -13,6 +14,7 @@ app.use(cors(
         credentials: true
     }
 ))
+
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -38,6 +40,7 @@ app.post('/login', (req, res) => {
 
 app.post("/register", (req, res) => {
     const sql = "insert into user (`user_name`, `email`, `password`, `gender`) values (?)";
+    
     const values = [
         req.body.name,
         req.body.email,

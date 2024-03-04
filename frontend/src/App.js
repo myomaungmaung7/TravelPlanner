@@ -5,7 +5,6 @@ import Login from './Login';
 import Register from './Register';
 import UnHome from './UnHome';
 import AdminProfile from './AdminProfile';
-import AddNewDestination from './AddNewDestination';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/adminprofile' element={<AdminProfile/>}></Route>
-          <Route path='/addnewdestination' element={<AddNewDestination/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
