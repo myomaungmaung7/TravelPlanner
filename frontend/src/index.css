@@ -46,15 +46,15 @@ code {
 
 
 
-#main {
+/* #main {
   background-image: url("./Images/bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100vh;
-}
-#view {
+} */
+/* #view {
   font-size: 1.1rem;
-}
+} */
 
 
 
@@ -68,9 +68,7 @@ code {
  
 }
 
-#de:hover {
-  color: #F171AB;
-}
+
 
 /* #back {
   width: 100px;
@@ -114,7 +112,7 @@ label {
   text-align: right;
   padding: 10px;
 }
-button{
+#bu{
   position: absolute;
   bottom:20%;
   left: 44%;

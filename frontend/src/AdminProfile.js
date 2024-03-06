@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {Link} from 'react-router-dom'
-import axios from 'axios'
+
 import logo from './Images/IATLogo.png'
 
 
@@ -14,13 +14,7 @@ import logo from './Images/IATLogo.png'
 //     }, [])
 
 function AdminProfile() {
-  const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://localhost:8081/')
-            .then(res => setUsers(res.data))
-            .catch(err => console.log(err))
-    }, [])
+ 
   return (
     <div id='main'>
     <header>
@@ -72,7 +66,7 @@ function AdminProfile() {
     </div>
 
     </div>
-    <button type='submit'  className='btn rounded border border-secondary float-end fw-bold' style={{background: 'rgb(200, 209, 218)'}}  >
+    <button type='submit'  className='btn rounded border border-secondary float-end fw-bold' id="bu" style={{background: 'rgb(200, 209, 218)'}}  >
                 Edit your Profile Info
             </button>
     
