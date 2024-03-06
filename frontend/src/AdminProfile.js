@@ -62,7 +62,7 @@ function AdminProfile() {
         </div>
 
         <div className='input-group mb-3' >
-            <label htmlFor='role' className='fw-bold'>Gender: </label>
+            <label htmlFor='role' className='fw-bold' >Gender: </label>
             
         </div>
 
