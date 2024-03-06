@@ -5,13 +5,13 @@ import axios from 'axios'
 import logo from './Images/IATLogo.png'
 
 
-//   const [users, setUsers] = useState([]);
+// const [users, setUsers] = useState([]);
 
-//     useEffect(() => {
-//         axios.get('http://localhost:8081/')
-//             .then(res => setUsers(res.data))
-//             .catch(err => console.log(err))
-//     }, [])
+// useEffect(() => {
+//     axios.get('http://localhost:8081/')
+//         .then(res => setUsers(res.data))
+//         .catch(err => console.log(err))
+// }, [])
 
 function AdminProfile() {
   return (
@@ -59,7 +59,6 @@ function AdminProfile() {
             
         </div>
 
-        
     </form>
    
     </div>
