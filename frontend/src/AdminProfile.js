@@ -47,16 +47,16 @@ function AdminProfile() {
     <div className='border border-secondary rounded'>
     <form className>
         <div className='input-group mb-3'>
-            <label htmlFor='user' className='fw-bold'>User Name:</label>
+            <label htmlFor='user' className='fw-bold' id="user">User Name:</label>
         </div>
 
         <div className='input-group mb-3' >
-            <label htmlFor='email' className='fw-bold'>Email:</label>
+            <label id="email" htmlFor='email' className='fw-bold'>Email:</label>
             
         </div>
 
         <div className='input-group mb-3' >
-            <label htmlFor='role' className='fw-bold'>Gender: </label>
+            <label id="ro" htmlFor='role' className='fw-bold'>Gender: </label>
             
         </div>
 

@@ -106,7 +106,7 @@ code {
   border-radius: 5px;
 } 
 
-label {
+#user {
   float: left;
   width: 110px;
   text-align: right;
@@ -118,4 +118,18 @@ label {
   left: 44%;
  
 
+}
+
+#ro {
+  float: left;
+  width: 110px;
+  text-align: right;
+  padding: 10px;
+}
+
+#email {
+  float: left;
+  width: 110px;
+  text-align: right;
+  padding: 10px;
 }
