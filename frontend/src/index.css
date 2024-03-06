@@ -27,4 +27,97 @@ code {
   color: black;
 }
 
+#des:hover {
+  color: #F171AB;
+}
 
+#female {
+  color: #F171AB;
+}
+
+#right {
+ width: 100px;
+ text-align: right;
+ clear: both;
+ padding: 10px;
+}
+
+
+
+
+
+#main {
+  background-image: url("./Images/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+#view {
+  font-size: 1.1rem;
+}
+
+
+
+
+
+#pro {
+ position: absolute;
+ top:13%;
+ left: 46%;
+ font-size: 8em; 
+ 
+}
+
+#de:hover {
+  color: #F171AB;
+}
+
+/* #back {
+  width: 100px;
+  height: 40px;
+  font-size: 17px;
+  background: rgb(200, 209, 218);
+  
+}
+
+#add {
+  width: 135px;
+  height: 40px;
+  background: rgb(200, 209, 218);
+  font-size: smaller;
+}
+
+#arrow {
+  width: 100px;
+  height: 50px;
+}
+
+#plus {
+  font-size: larger;
+} */
+
+.wrapper{
+  width: 450px;
+  height: 135px;
+  margin: auto;
+  margin-top: 200px;
+  
+
+  
+  
+  border-radius: 5px;
+} 
+
+label {
+  float: left;
+  width: 110px;
+  text-align: right;
+  padding: 10px;
+}
+button{
+  position: absolute;
+  bottom:20%;
+  left: 44%;
+ 
+
+}

@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors(
     {
         origin: ["http://localhost:3000"],
-        methods: ["POST, GET"],
+        methods: ["POST, GET, PUT, DELETE"],
         credentials: true
     }
 ))
@@ -40,7 +40,6 @@ app.post('/login', (req, res) => {
 
 app.post("/register", (req, res) => {
     const sql = "insert into user (`user_name`, `email`, `password`, `gender`) values (?)";
-    
     const values = [
         req.body.name,
         req.body.email,
@@ -51,6 +50,43 @@ app.post("/register", (req, res) => {
         if (err) {
             return res.json("Error");
         }
+        return res.json(data);
+    })
+})
+
+app.get("/", (req, res) => {
+    const sql = "select * from user";
+    db.query(sql, (err, data) => {
+        if(err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
+app.post('/addnewuser', (req, res) => {
+    const sql = "insert into user (user_name,email,password,role,gender) values (?)";
+    const values = [...Object.values(req.body)];
+    db.query(sql, [values], (err, data) => {
+        if(err) return res.json("Error");
+        return res.json({data})
+    })
+})
+
+app.put('/edituser/:id', (req, res) => {
+    const sql = "UPDATE user SET user_name=?, email=?, role=? WHERE user_id=?";
+    const id = req.params.id;
+    const values = [req.body.name, req.body.email, req.body.role]
+    console.log(req.body.name)
+    db.query(sql, [...values, id], (err, data) => {
+        if (err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
+app.delete('/manageaccount/:id', (req, res) => {
+    const sql = "delete from user where user_id=?";
+    const id = req.params.id;
+    db.query(sql, [id], (err, data) => {
+        if(err) return res.json("Error");
         return res.json(data);
     })
 })
