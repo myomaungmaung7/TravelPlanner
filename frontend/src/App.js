@@ -9,6 +9,7 @@ import Profile from './Profile';
 import ManageAccount from './ManageAccount';
 import AddNewUser from './AddNewUser'
 import AddNewDestination from './AddNewDestination';
+import EditUser from './EditUser';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/manageaccount' element={<ManageAccount/>}></Route>
           <Route path='/addnewuser' element={<AddNewUser/>}></Route>
           <Route path='/addnewdestination' element={<AddNewDestination/>}></Route>
+          <Route path='/edituser/:id' element={<EditUser/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
