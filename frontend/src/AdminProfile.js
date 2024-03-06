@@ -14,13 +14,6 @@ import logo from './Images/IATLogo.png'
 //     }, [])
 
 function AdminProfile() {
-  const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://localhost:8081/')
-            .then(res => setUsers(res.data))
-            .catch(err => console.log(err))
-    }, [])
   return (
     <div id='main'>
     <header>
