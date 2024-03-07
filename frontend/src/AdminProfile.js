@@ -1,20 +1,19 @@
-
+import React, { useEffect, useState } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {Link} from 'react-router-dom'
-
+import axios from 'axios'
 import logo from './Images/IATLogo.png'
 
 
-//   const [users, setUsers] = useState([]);
+// const [users, setUsers] = useState([]);
 
-//     useEffect(() => {
-//         axios.get('http://localhost:8081/')
-//             .then(res => setUsers(res.data))
-//             .catch(err => console.log(err))
-//     }, [])
+// useEffect(() => {
+//     axios.get('http://localhost:8081/')
+//         .then(res => setUsers(res.data))
+//         .catch(err => console.log(err))
+// }, [])
 
 function AdminProfile() {
- 
   return (
     <div id='main'>
     <header>
@@ -47,26 +46,25 @@ function AdminProfile() {
     <div className='border border-secondary rounded'>
     <form className>
         <div className='input-group mb-3'>
-            <label htmlFor='user' className='fw-bold' id="user">User Name:</label>
+            <label htmlFor='user' className='fw-bold'>User Name:</label>
         </div>
 
         <div className='input-group mb-3' >
-            <label id="email" htmlFor='email' className='fw-bold'>Email:</label>
+            <label htmlFor='email' className='fw-bold'>Email:</label>
             
         </div>
 
         <div className='input-group mb-3' >
-            <label id="ro" htmlFor='role' className='fw-bold'>Gender: </label>
+            <label htmlFor='role' className='fw-bold' >Gender: </label>
             
         </div>
 
-        
     </form>
    
     </div>
 
     </div>
-    <button type='submit'  className='btn rounded border border-secondary float-end fw-bold' id="bu" style={{background: 'rgb(200, 209, 218)'}}  >
+    <button type='submit'  className='btn rounded border border-secondary float-end fw-bold' style={{background: 'rgb(200, 209, 218)'}}  >
                 Edit your Profile Info
             </button>
     
