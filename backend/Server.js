@@ -3,6 +3,7 @@ import cors from 'cors'
 import mysql from 'mysql'
 import cookieParser from 'cookie-parser'
 import jwt from 'jsonwebtoken'
+import multer from 'multer';
 
 const app = express();
 app.use(cookieParser());
@@ -15,6 +16,7 @@ app.use(cors(
     }
 ))
 
+const upload = multer({ dest: 'uploads/' });
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -90,6 +92,23 @@ app.delete('/manageaccount/:id', (req, res) => {
         return res.json(data);
     })
 })
+
+app.post('/upload', upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', maxCount: 1 }]), (req, res) => {
+    const name = req.body.name;
+    const description = req.body.description;
+    const division = req.body.division;
+    const image1Path = req.files['image1'][0].path;
+    const image2Path = req.files['image2'][0].path;
+  
+    const sql = 'INSERT INTO destination (image1, image2, name, description, division) VALUES (?, ?, ?, ?, ?)';
+    db.query(sql, [image1Path, image2Path, name, description, division], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      console.log('Record inserted');
+      res.json({ status: 'Success', message: 'Files uploaded and data stored successfully' });
+    });
+  });
 
 app.listen(8081, () => {
     console.log("Running.....")
